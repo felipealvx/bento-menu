@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Poppins;
+}
+
+body {
+	/*DEPOIS FAÇO*/
+	width: 100%;
+	height: 100vh;
+	background-color: #1f1f1f;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+body.light {
+	background-color: #e4e4e4;
+}
+
+:root {
+	--color__1: #373737;
+	--color__2: #F2C12E;
+}
+
+.container {
+	display: grid;
+	background-color: #1a1a1a;
+	max-width: 600px;
+	height: 100vh;
+	border-radius: 20px;
+	gap: 20px;
+	padding: 20px;
+	grid-template:
+		"widget__1 widget__1 widget__1" 1fr
+		"widget__2 widget__3 widget__3" 1fr
+		"widget__2 widget__5 widget__4" 1fr
+		"widget__6 widget__6 widget__6" 1fr
+		/ 100px 1fr 1fr;
+}
+
+.container.light {
+	background-color: whitesmoke;
+}
+
+.widget__1, .widget__2, .widget__3, .widget__4, .widget__5, .widget__6 {
+	border-radius: 10px;
+}
+
+.widget__1 {
+	background-color: var(--color__1);
+	grid-area: widget__1;
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 10px;
+	color: #e4e4e4;
+}
+
+.widget__1.light {
+	background-color: #cfcfcf;
+	color: #373737;
+	.photo img {
+		filter: none;
+	}
+	.porfolio {
+		color: #373737;
+	}
+}
+
+.photo {
+	border-radius: 50px;
+	height: 90px;
+	width: 90px;
+	background-color: #e4e4e4;
+}
+
+.photo img {
+	height: 100%;
+	border-radius: 50px;
+	border: 2px solid white;
+	image-rendering: pixelated;
+	filter:grayscale();
+}
+
+.title-name {
+	font-size: 10px;
+	display: flex;
+	flex-direction: column;
+}
+
+.porfolio {
+	color: whitesmoke;
+	padding-block: 10px;
+	transition: all .3s ease-in;
+} .porfolio:hover {
+	color: #F2C12E;
+}
+
+.mode__theme {
+	font-size: 30px;
+	position: relative;
+}
+#night__mode {
+	cursor: pointer;
+	padding: 20px;
+}
+
+#check {
+	opacity: 0;
+	position: absolute;
+	cursor: pointer;
+}
+
+.widget__2 {
+	/* background-color: var(--color__1); */
+	grid-area: widget__2;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	color: whitesmoke;
+	font-size: 50px;
+	text-decoration: none;
+}
+
+/* ICONES DAS REDES SOCIAIS */
+.github {
+	color: whitesmoke;
+	transition: all .3s ease-in-out;
+}.github.light {
+	color: #373737;
+} .github:hover {
+	color: #F2C12E;
+}
+.linkedin {
+	color: whitesmoke;
+	transition: all .3s ease-in-out;
+}.linkedin.light {
+	color: #373737;
+} .linkedin:hover {
+	color: #F2C12E;
+}
+.instagram {
+	color: whitesmoke;
+	transition: all .3s ease-in-out;
+}.instagram.light {
+	color: #373737;
+} .instagram:hover {
+	color: #F2C12E;
+}
+
+/* SKILLS, WIDGET 3 */
+.widget__3 {
+	background-color: var(--color__1);
+	grid-area: widget__3;
+	padding: 20px;
+	color: #e4e4e4;
+}
+.widget__3.light {
+	background-color: #cfcfcf;
+	color: #373737;
+}
+
+.title-skills {
+	font-size: 15px;
+}
+
+.skills-icons {
+	display: flex;
+	gap: 10px;
+	font-size: 20px;
+	padding-top: 5px;
+	flex-wrap: wrap;
+}
+
+.text-skills {
+	padding-top: 5px;
+	font-size: 10px;
+	text-align: left;
+}
+
+/* widget 4 o vazio */
+.widget__4 {
+	background-color: var(--color__1);
+	grid-area: widget__4;
+}
+.widget__4.light {
+	background-color: #cfcfcf;
+}
+
+/* widget 5 o da foto do gatinho */
+.widget__5 {
+	background-color: var(--color__1);
+	grid-area: widget__5;
+	background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Sample_of_black_and_white_photography.JPG/2560px-Sample_of_black_and_white_photography.JPG);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.widget__5.light {
+	background-color: #cfcfcf;
+}
+
+.widget__6 {
+	background-color: #e4e4e4;
+	grid-area: widget__6;
+}
+
