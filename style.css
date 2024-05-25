@@ -8,13 +8,13 @@
 }
 
 body {
-	/*DEPOIS FAÇO*/
 	width: 100%;
 	height: 100vh;
 	background-color: #1f1f1f;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	transition: all .3s ease-in-out;
 }
 
 body.light {
@@ -30,7 +30,7 @@ body.light {
 	display: grid;
 	background-color: #1a1a1a;
 	max-width: 600px;
-	height: 100vh;
+	max-height: 100%;
 	border-radius: 20px;
 	gap: 20px;
 	padding: 20px;
@@ -40,6 +40,7 @@ body.light {
 		"widget__2 widget__5 widget__4" 1fr
 		"widget__6 widget__6 widget__6" 1fr
 		/ 100px 1fr 1fr;
+	transition: all .3s ease-in-out;
 }
 
 .container.light {
@@ -124,7 +125,7 @@ body.light {
 	align-items: center;
 	justify-content: space-around;
 	color: whitesmoke;
-	font-size: 50px;
+	font-size: 2.5rem;
 	text-decoration: none;
 }
 
@@ -158,8 +159,11 @@ body.light {
 .widget__3 {
 	background-color: var(--color__1);
 	grid-area: widget__3;
-	padding: 20px;
+	padding: 10px 20px;
 	color: #e4e4e4;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 .widget__3.light {
 	background-color: #cfcfcf;
@@ -188,16 +192,28 @@ body.light {
 .widget__4 {
 	background-color: var(--color__1);
 	grid-area: widget__4;
+	font-size: 2.5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: #cfcfcf;
+	font-weight: 600;
+}
+.sub-hour {
+	font-size: 0.6rem;
+	font-weight: 200;
 }
 .widget__4.light {
 	background-color: #cfcfcf;
+	color: #373737;
 }
 
 /* widget 5 o da foto do gatinho */
 .widget__5 {
 	background-color: var(--color__1);
 	grid-area: widget__5;
-	background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Sample_of_black_and_white_photography.JPG/2560px-Sample_of_black_and_white_photography.JPG);
+	background-image: url(./imgs/vagabond-img.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -210,3 +226,18 @@ body.light {
 	grid-area: widget__6;
 }
 
+@media screen and (max-width: 340px) {
+	.container {
+		height: 700px;
+	}
+	.title-skills {
+		font-size: 10px;
+	}
+	.skills-icons {
+		font-size: 15px;
+	}
+	.text-skills {
+		display: none;
+	}
+
+}
